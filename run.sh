@@ -1,4 +1,3 @@
-
 git clone https://github.com/haotian-liu/LLaVA.git
 python3 -m venv llava_finetune_branch
 source llava_finetune_branch/bin/activate

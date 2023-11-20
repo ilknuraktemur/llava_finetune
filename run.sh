@@ -5,7 +5,7 @@ source project3/bin/activate
 apt update
 apt-get install unzip
 cd LLaVA
-ip install --upgrade pip  # enable PEP 660 support
+ip install --upgrade pip 
 pip install -e
 pip install -e ".[train]"
 pip install flash-attn --no-build-isolation
@@ -21,6 +21,6 @@ wget -O data.json https://drive.google.com/uc?id=1Cgl6magIQZHUB05aWq1ZzFxc0nmgp-
 cd /workspace/ilknur
 python change.py
 ##run this on LLaVa path
-# Hedef dosyada belirli bir satırı değiştir
+# change a specific row in bash script for fine tune
 sed -i '8s~.*~\t--data_path /workspace/ilknur/sample_data/data2.json \\~' "/workspace/ilknur/LLaVA/scripts/v1_5/finetune_task_lora.sh"
 sed -i '9s~.*~\t--image_folder /workspace/ilknur/sample_data/data \\~' "/workspace/ilknur/LLaVA/scripts/v1_5/finetune_task_lora.sh"
